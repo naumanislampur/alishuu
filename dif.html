@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday My Love ❤️</title>
+  <link href="https://fonts.googleapis.com/css?family=Pacifico|Montserrat:400,700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: radial-gradient(ellipse at top, #ffe6eb 0%, #ffeaf3 100%);
+      font-family: 'Montserrat', sans-serif;
+      overflow-x: hidden;
+    }
+    .container {
+      z-index: 10;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 40px 20px 60px 20px;
+      text-align: center;
+      position: relative;
+    }
+    .main-title {
+      font-family: 'Pacifico', cursive;
+      font-size: 3em;
+      color: #d72660;
+      margin-top: 1em;
+      margin-bottom: 0.2em;
+      letter-spacing: 0.04em;
+      text-shadow: 0 4px 12px #fff4f8;
+    }
+    .message {
+      color: #bf1650;
+      font-size: 1.4em;
+      margin-bottom: 2em;
+      background: #fff6fa7c;
+      border-radius: 20px;
+      padding: 18px 26px;
+      display: inline-block;
+      font-weight: bold;
+    }
+    .gallery-title {
+      font-size: 2em;
+      margin: 1.5em 0 0.6em 0;
+      color: #aa2057;
+      font-family: 'Pacifico', cursive;
+    }
+    .photo-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 2em;
+    }
+    .photo-gallery img {
+      width: 130px;
+      height: 170px;
+      object-fit: cover;
+      border-radius: 18px;
+      box-shadow: 0 6px 24px #e8b0c2b5;
+      border: 3px solid #fff;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .photo-gallery img:hover {
+      transform: scale(1.08) rotate(-1deg);
+      box-shadow: 0 12px 28px #da86b0c8;
+    }
+    .signature {
+      font-family: 'Pacifico', cursive;
+      font-size: 1.3em;
+      color: #bf1650;
+      margin-top: 2em;
+    }
+    .heart, .rose {
+      position: fixed;
+      pointer-events: none;
+      z-index: 5;
+    }
+    .heart {
+      width: 24px;
+      height: 24px;
+      background-image: url('https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/2764.svg');
+      background-size: cover;
+      opacity: 0.96;
+      animation: floatHeart 4.6s linear forwards;
+    }
+    @keyframes floatHeart {
+      0% { transform: translateY(0) scale(1) rotate(0);}
+      70% { opacity: .8;}
+      100% {transform: translateY(-92vh) scale(1.3) rotate(10deg); opacity:0;}
+    }
+    .rose {
+      width: 36px;
+      height: 36px;
+      
+      background-size: cover;
+      opacity: 0.88;
+      animation: fallRose 8s linear forwards;
+    }
+    @keyframes fallRose {
+      0% { top: -40px; opacity:1;}
+      80% { opacity:0.95;}
+      100% { top: 102vh; opacity:0;}
+    }
+    @media (max-width: 600px) {
+      .main-title { font-size:2em; }
+      .gallery-title { font-size:1.2em; }
+      .photo-gallery img { width:100px;height:120px;}
+      .container {padding: 18px 4vw;}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="main-title">Happy Birthday, My Love! ❤️</div>
+    <div class="message">
+      You’re the reason my life sparkles.<br>
+      I wish your every dream comes true and your smile only grows brighter.<br>
+      <span style="font-size:1.25em">💞 You are Cutie Pookie Patootie 💞</span>
+    </div>
+
+    <div class="gallery-title">Some of Your Lovely Smiles</div>
+    <div class="photo-gallery">
+      <img src="C:\Users\ashpa\Downloads\WhatsApp Image 2025-08-17 at 00.54.34.jpeg" alt="Her Smile">
+      <img src="C:\Users\ashpa\Downloads\WhatsApp Image 2025-08-17 at 00.59.07.jpeg" alt="Her Fun Moment">
+      <img src="C:\Users\ashpa\Downloads\WhatsApp Image 2025-08-15 at 07.26.03.jpeg" alt="Pretty Pose">
+      <!-- Add more photos as needed -->
+    </div>
+
+    <div class="signature">
+      Forever yours,<br>
+      <span style="color:#c5336c">Nauman Rockstar</span>
+    </div>
+  </div>
+
+  <!-- Animated Hearts -->
+  <script>
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.style.left = Math.random() * 90 + 'vw';
+      heart.style.top = (Math.random() * 15 + 75) + 'vh'; // from bottom upwards
+      document.body.appendChild(heart);
+      setTimeout(()=>heart.remove(), 4700);
+    }
+    setInterval(createHeart, 350);
+  </script>
+
+  <!-- Falling Roses Animation -->
+  <script>
+    function createRose() {
+      const rose = document.createElement('div');
+      rose.className = 'rose';
+      rose.style.left = Math.random() * 95 + 'vw';
+      rose.style.top = '-40px';
+      document.body.appendChild(rose);
+      setTimeout(()=>rose.remove(), 8200);
+    }
+    setInterval(createRose, 1200);
+  </script>
+</body>
+</html>
